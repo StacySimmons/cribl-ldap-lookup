@@ -210,4 +210,4 @@ This script is provided as-is for educational and testing purposes. Ensure compl
 
 ## Contact
 
-For issues or feature requests, contact your system administrator or Cribl support at https://cribl.io/support.
+For issues or feature requests, please contact ssimmons@cribl.io.

@@ -164,20 +164,20 @@ def query_ad_users(ad_server, ad_user, ad_password, ad_domain, ad_search_domain,
         conn.search(
             search_base=search_base,
             search_filter='(objectClass=user)',
-            attributes=['sAMAccountName', 'displayName', 'mail', 'department', 'title']
+            attributes=['sAMAccountName', 'DisplayName', 'EmailAddress', 'Department', 'Title']
         )
 
         # Write to CSV
         with open(output_file, 'w', newline='') as csvfile:
             writer = csv.writer(csvfile)
-            writer.writerow(['sAMAccountName', 'displayName', 'mail', 'department', 'title'])
+            writer.writerow(['sAMAccountName', 'DisplayName', 'EmailAddress', 'Department', 'Title'])
             for entry in conn.entries:
                 writer.writerow([
                     entry.sAMAccountName.value or '',
-                    entry.displayName.value or '',
-                    entry.mail.value or '',
-                    entry.department.value or '',
-                    entry.title.value or ''
+                    entry.DisplayName.value or '',
+                    entry.EmailAddress.value or '',
+                    entry.Department.value or '',
+                    entry.Title.value or ''
                 ])
 
         print(f"AD user data exported to {output_file}")

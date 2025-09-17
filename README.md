@@ -4,7 +4,7 @@ This Python script queries an Active Directory (AD) server for user information,
 
 ## Features
 
-- **AD Query**: Retrieves user attributes (`sAMAccountName`, `displayName`, `mail`, `department`, `title`) from an AD server via LDAP.
+- **AD Query**: Retrieves user attributes (`sAMAccountName`, `DisplayName`, `EmailAddress`, `Department`, `Title`) from an AD server via LDAP.
 - **CSV Export**: Saves query results to a CSV file.
 - **Cribl Cloud Integration**: Authenticates with Cribl Cloud, uploads the CSV, manages lookup objects, and deploys changes.
 - **Flexible Configuration**: Supports configuration via a `config.ini` file or command-line arguments.
